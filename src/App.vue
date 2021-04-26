@@ -1,18 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <v-table :users_data="USERS"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import {mapActions, mapGetters} from 'vuex'
+import vTable from './components/table/v-table'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    vTable
+  },
+  data: () => {
+    return {}
+  },
+  computed: {
+    ...mapGetters([
+      'USERS'
+    ])
+  },
+
+  methods: {
+    ...mapActions([
+      'GET_USERS_FROM_API'
+    ])
+  },
+
+  mounted() {
+    this.GET_USERS_FROM_API()
   }
+
 }
 </script>
 
