@@ -45,5 +45,11 @@ export default {
 .v-table__header {
   display: flex;
   justify-content: space-around;
+  border-bottom: solid 1px #e7e7e7;
+}
+
+.v-table__header p {
+  flex-basis: 25%;
+  text-align: left;
 }
 </style>
