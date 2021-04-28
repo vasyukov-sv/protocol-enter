@@ -4,7 +4,6 @@
     <div class="row row__earned">{{row_data.points_earned}}</div>
     <div class="row row__spent">{{row_data.points_spent}}</div>
     <div class="row row__date">{{row_data.registration_date}}</div>
-
   </div>
 </template>
 
